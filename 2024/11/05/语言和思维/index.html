@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>大模型掌握形式语言而非思维 | Sophie Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="语言就像思维的窗口，我们通常会根据别人说了什么来推测对方在想什么。但是擅长语言等于擅长思维吗？这是一个误解，尤其是大语言模型的出现让这种误解达到了高潮。图灵于1950年提出利用语言和思维之间的强相关，把语言作为思维的接口，用语言测试来检验机器类人思维的能力。图灵测试给公众造成一种印象，即如果一个人或机器擅长语言，那也就擅长思维（“good at language -&gt; good at tho">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大模型掌握形式语言而非思维">
+<meta property="og:url" content="https://sophiewu9824.github.io/2024/11/05/%E8%AF%AD%E8%A8%80%E5%92%8C%E6%80%9D%E7%BB%B4/index.html">
+<meta property="og:site_name" content="Sophie Wu">
+<meta property="og:description" content="语言就像思维的窗口，我们通常会根据别人说了什么来推测对方在想什么。但是擅长语言等于擅长思维吗？这是一个误解，尤其是大语言模型的出现让这种误解达到了高潮。图灵于1950年提出利用语言和思维之间的强相关，把语言作为思维的接口，用语言测试来检验机器类人思维的能力。图灵测试给公众造成一种印象，即如果一个人或机器擅长语言，那也就擅长思维（“good at language -&gt; good at tho">
+<meta property="og:locale">
+<meta property="og:image" content="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=MTRmMTgxNDlmOWUxOGZmMzFhN2JjYzRlZjUyZGNmNjRfM2lNRVB2V2prY2V5U1ZPaTR5NGV4bzZzaGZQMWttbVJfVG9rZW46T2dVR2JBQ21Tb3c5RDB4cnJUM2NUQ0prbjBkXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA">
+<meta property="og:image" content="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=ODU2NDBhOWNkODE2YmFjYzc2M2ZjMDVlZTgxMTNiZWRfTGc5VVdzOFk1a1o3SnFzMEp5MkRtUjlVU291VnBpbWlfVG9rZW46Vm9GeGJjNU41b1VGejV4dGU0VmNkbFUxbjZkXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA">
+<meta property="og:image" content="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=NTkxZTMxNzBhNWU0ZGM4NzNkYTViMWU2NzMyMTMwYjRfM2E0NUFWbzBxVEdianpnRGQ5WlZOR1lMOUNFSTFzVE1fVG9rZW46TjBabGJxSXVJb2xDMFR4ZVdnV2NRQzBmbk9jXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA">
+<meta property="og:image" content="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=NTY0MWUyNzNlZDMyYzMyMzQ1ZmRkZmQzNDBhYjdmYjFfbjRDc0NqRWhMdmx3VHI3S0RoV0dpbHo2Nzc2a1JWU2ZfVG9rZW46SERWOGJQcGpMb3N1eUF4VE5QNGNJc0RlbnlxXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA">
+<meta property="article:published_time" content="2024-11-05T15:06:12.000Z">
+<meta property="article:modified_time" content="2024-11-10T00:57:46.370Z">
+<meta property="article:author" content="WenyaWu">
+<meta property="article:tag" content="大模型">
+<meta property="article:tag" content="认知神经科学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=MTRmMTgxNDlmOWUxOGZmMzFhN2JjYzRlZjUyZGNmNjRfM2lNRVB2V2prY2V5U1ZPaTR5NGV4bzZzaGZQMWttbVJfVG9rZW46T2dVR2JBQ21Tb3c5RDB4cnJUM2NUQ0prbjBkXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA">
+  
+    <link rel="alternate" href="/atom.xml" title="Sophie Wu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Sophie Wu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Beauty always leads us to truth.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sophiewu9824.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-语言和思维" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/05/%E8%AF%AD%E8%A8%80%E5%92%8C%E6%80%9D%E7%BB%B4/" class="article-date">
+  <time class="dt-published" datetime="2024-11-05T15:06:12.000Z" itemprop="datePublished">2024-11-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      大模型掌握形式语言而非思维
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>语言就像思维的窗口，我们通常会根据别人说了什么来推测对方在想什么。但是擅长语言等于擅长思维吗？这是一个误解，尤其是大语言模型的出现让这种误解达到了高潮。图灵于1950年提出利用语言和思维之间的强相关，把语言作为思维的接口，用语言测试来检验机器类人思维的能力。图灵测试给公众造成一种印象，即如果一个人或机器擅长语言，那也就擅长思维（“good at language -&gt; good at thought”），这是一种认知谬误。</p>
+<p>本文结合近期文献，主要讨论如下问题：语言和思维之间是什么关系？大模型在何种程度上掌握了语言和思维？第一部分从认知神经科学的角度介绍人脑中分别负责语言和思维功能的脑网络及其分离关系；第二部分从形式语言和功能语言二分类的角度揭示大模型仅掌握形式语言，而功能语言是思维的重要环节。未来大模型要想具备思维，一个可能的发展方向是，模仿人脑中形式语言和功能语言分离加工的特征，通过不同的模块分别实现这两种语言能力，而非仅局限于擅长形式语言。</p>
+<span id="more"></span>
+
+<ol>
+<li><h1 id="语言的功能：交流-VS-思维"><a href="#语言的功能：交流-VS-思维" class="headerlink" title="语言的功能：交流 VS. 思维"></a>语言的功能：交流 VS. 思维</h1></li>
+</ol>
+<p>语言大约出现于10万到100万年前，对于语言的功能及其起源的因果驱动力目前主要存在两种假设。一种假设认为语言主要发挥交流功能（language-for-communication，LFC），用于跟他人分享知识、思想和感受；另一种假设则认为语言主要是思维和认知的媒介（language-for-thought，LFT），LFT这种说法又分成强和弱两种形式，强LFT认为语言是所有思维形式的媒介，弱LFT认为语言只是某些思维形式的媒介。</p>
+<p>从进化上来看，LFC和LFT两种假设都是合理的，因为都能给人带来自然选择优势。一方面，语言用于交流，才能够将知识和技能进行种内横向传播和代际纵向传递；另一方面，语言用于思维，更强的推理能力才能支撑更复杂的前瞻性规划和决策。那么语言的演化驱动力主要是思维方面的优势吗？这是一个可证伪的问题。如果语言对某些思维形式是必需的（必要条件），那么当语言功能受损时，这些思维形式将无法实现，神经科学可以对LFT进行检验。</p>
+<ol>
+<li><h2 id="人脑的语言网络"><a href="#人脑的语言网络" class="headerlink" title="人脑的语言网络"></a>人脑的语言网络</h2></li>
+</ol>
+<p>言语产生（language production）和言语理解（language apprehension）的神经基础是位于大脑左半球的语言网络。语言网络具有如下两个重要的属性。一方面，语言区域的活动独立于输入（理解语言）和输出（产生语言）的模态（口语，书面语，或符号语），具有表征的抽象性。另一方面，语言区域参与表征词义和语法结构，脑成像结果表明语言网络的所有脑区对于词义以及词汇间的语义关系都是敏感的。</p>
+<p>人脑语言网络进行语言表征的抽象性以及对词义和句法结构的敏感性使其成为检验语言和思维关系的核心关注区域。语言神经基础的经典模型如下图 a 所示，包括两个大脑皮层区域，分别是位于额下皮质的布洛卡区（Broca区）和位于后颞下皮质的威尔尼克区（Wernicka区），二者分别支持言语产生和言语理解。</p>
+<p><img src="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=MTRmMTgxNDlmOWUxOGZmMzFhN2JjYzRlZjUyZGNmNjRfM2lNRVB2V2prY2V5U1ZPaTR5NGV4bzZzaGZQMWttbVJfVG9rZW46T2dVR2JBQ21Tb3c5RDB4cnJUM2NUQ0prbjBkXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA" alt="img"></p>
+<ol>
+<li><h2 id="语言和思维的关系：既不充分也不必要"><a href="#语言和思维的关系：既不充分也不必要" class="headerlink" title="语言和思维的关系：既不充分也不必要"></a>语言和思维的关系：既不充分也不必要</h2></li>
+</ol>
+<ul>
+<li><strong>语言不是思维的必要条件</strong></li>
+</ul>
+<p>推断大脑和行为关系的一个经典方法是神经心理学研究，即检验脑损伤患者的行为。如果语言是某些思维形式的必要媒介，那么语言功能受损的患者也将无法执行这些形式的思维过程。对失语症（aphasia）患者（词汇和句法加工能力受损）进行系统的思维和推理检查，穷尽数学推理、跨领域信息整合、分类等所有思考和推理形式，结果显示有些患者在这些能力上仍旧保持完好。</p>
+<p>对健康人群的脑成像研究（完成相应测试任务的同时扫描功能核磁 fMRI）也发现，支持言语产生和理解的语言网络与支持心理理论（知道别人心里怎么想）和其他多种思考形式（如执行功能、新异问题解决、数学、推理、代码理解）的脑区少有重叠（如下图）。</p>
+<p><img src="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=ODU2NDBhOWNkODE2YmFjYzc2M2ZjMDVlZTgxMTNiZWRfTGc5VVdzOFk1a1o3SnFzMEp5MkRtUjlVU291VnBpbWlfVG9rZW46Vm9GeGJjNU41b1VGejV4dGU0VmNkbFUxbjZkXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA" alt="img"></p>
+<p>因此，在没有语言功能的情况下所有类型的思维都是可能的，换言之，语言对于任何形式的思维都不是必要的。</p>
+<ul>
+<li><strong>语言不是思维的充分条件</strong></li>
+</ul>
+<p>语言系统完好的个体未必具有完好的推理能力，多种智力损伤患者的语言能力是没有问题的。先天性智力障碍，如唐氏综合征、威廉姆斯综合征这些基因遗传病导致的智障患者具有基本正常的语言能力。也有很多案例显示后天性脑损伤导致推理和问题解决能力受损的患者仍然保有完整的语言能力。</p>
+<ol>
+<li><h2 id="语言是高效的交流编码方式"><a href="#语言是高效的交流编码方式" class="headerlink" title="语言是高效的交流编码方式"></a>语言是高效的交流编码方式</h2></li>
+</ol>
+<p>上面证伪了language-for-thought假设，这部分给出language-for-communication的支持证据，主要着眼于语言的不同层面特征对交流的便利性，由此反映语言在进化选择上的合理性。</p>
+<ul>
+<li>语音：一种语言的声音通常涵盖了广泛的音标空间，这种多样性让语言对于噪音的影响具有鲁棒性。此外，语言的声音集合也受到发声难易程度的影响（这是出于使用和普及的便利考虑）。</li>
+<li>词汇形式：语言偏好使用简短而高效的词汇，并且使用频率越高、信息含量越低的词汇越短，这些特性有助于语言理解和生成过程中词汇的提取。</li>
+<li>词汇含义：词汇构造通过适当权衡复杂性和信息性来优化交流效率。</li>
+<li>语法：语法是指组合词汇来表达大量含义的规则，语法的层级性和成分构成可能源自简化（易学习）和表达（高效交流）的需求。</li>
+</ul>
+<ol>
+<li><h1 id="LLM掌握形式语言而非功能语言"><a href="#LLM掌握形式语言而非功能语言" class="headerlink" title="LLM掌握形式语言而非功能语言"></a>LLM掌握形式语言而非功能语言</h1></li>
+<li><h2 id="两种语言能力：形式语言和功能语言"><a href="#两种语言能力：形式语言和功能语言" class="headerlink" title="两种语言能力：形式语言和功能语言"></a>两种语言能力：形式语言和功能语言</h2></li>
+</ol>
+<p><strong>形式语言能力（formal linguistic competence）</strong>是指掌握语言中规则和统计规律性的知识，保证语言的形式正确。具体包括正确组合词汇形成句子（语法）、组合音节构建正确的新词（构词）等。</p>
+<p><strong>功能语言能力（functional linguistic competence）</strong>是指在真实世界情境下使用语言，通过语言来达成目标。比如表情达意、请求帮助、欺骗、阿谀等。我们总是会将语言跟其他知觉和认知系统（如感觉、记忆）一同使用，单独的形式语言是没有意义的。功能语言能力不是特异于语言的认知功能。</p>
+<p><img src="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=NTkxZTMxNzBhNWU0ZGM4NzNkYTViMWU2NzMyMTMwYjRfM2E0NUFWbzBxVEdianpnRGQ5WlZOR1lMOUNFSTFzVE1fVG9rZW46TjBabGJxSXVJb2xDMFR4ZVdnV2NRQzBmbk9jXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA" alt="img"><img src="https://o16d39b5v31.feishu.cn/space/api/box/stream/download/asynccode/?code=NTY0MWUyNzNlZDMyYzMyMzQ1ZmRkZmQzNDBhYjdmYjFfbjRDc0NqRWhMdmx3VHI3S0RoV0dpbHo2Nzc2a1JWU2ZfVG9rZW46SERWOGJQcGpMb3N1eUF4VE5QNGNJc0RlbnlxXzE3MzExNjQ3NTA6MTczMTE2ODM1MF9WNA" alt="img"></p>
+<p>区分形式语言和功能语言的主要动机来自第一部分中有关语言和思维分离关系的神经证据，即语言是思维的既不充分也不必要条件，语言受损的患者可能具有完整的思维功能，而语言能力完好也并不意味着思维功能正常。此外，语言网络和负责多种常见思维形式的脑区也是分离的。</p>
+<ol>
+<li><h2 id="大模型已经掌握形式语言"><a href="#大模型已经掌握形式语言" class="headerlink" title="大模型已经掌握形式语言"></a>大模型已经掌握形式语言</h2></li>
+</ol>
+<p>乔姆斯基（Chomsky）在2019年指出“<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=cMscNuSUy0I">我们必须得问：深度学习是工程还是科学？……当工程来看值得，但是它并没有告诉我们任何关于人类语言的东西。</a>”语言学领域普遍认为深度学习模型并没有为语言学的科研提供任何兴趣点，而仅仅是工程问题。</p>
+<ul>
+<li><strong>统计语言模型基础</strong></li>
+</ul>
+<p>大模型源自计算语言学的几种早期方法，包括统计语言建模、词嵌入、联结主义。类似于早期的统计语言模型，LLMs通常首先在词汇预测任务上训练，使用分布式语言学和词嵌入的方法，把语言信息表征为高维空间中的向量，基于多层神经网络实现。</p>
+<p>大模型通常首先在由大量网络文本构成的训练集上进行训练，预训练（pretraining）过程的目标是：根据固定数量的背景token（基本单元，通常但不总是对应于单词或语素）来预测一个保留的token (a held-out token)。随后，将预测的token与真实的token（在该句子中实际出现的token）进行比较，错误信号会通过模型进行反向传播和参数更新。在预训练步骤之后，模型会针对更具体的任务进行微调（fine-tuned）。</p>
+<ul>
+<li><strong>大模型习得人类语言加工的核心层面</strong></li>
+</ul>
+<ol>
+<li>大模型在多种语言现象的基准测试上表现良好：大模型不仅在一般语言理解的测试上很成功（比如Glue Tasks），在对英语和其他有大量语料库的语言进行语言学能力测试时也表现很好。比如BLiMP benchmark（包含语法句子和非语法句子的配对）。</li>
+<li>大模型习得层级结构：语言中词汇并不是线性组合的，而是以树状结构层级化组织的。语言的层级结构在很多方面都有体现，比如be动词的形式跟主语的单复数相对应（”we are students.”,”he is a student.”），大模型虽然只是简单地存储词汇共现频率，也能从中习得主语和动词的对应关系，不过如果主语和动词之间间隔太远（比如“The keys to the old, wooden kitchen  cabinet are on the table.”, 主语和谓语动词间隔了6个单词），大模型就未必能准确判断了。</li>
+<li>大模型习得语言抽象：抽象（abstraction）是指可泛化的语言表征，如语法成分（主语、宾语等）、词汇类别（动词、名词）等，超越对输入特例的简单存储，容许泛化。通过语义上不符合常识的句子可以测试大模型的抽象能力，比如“这个好吃的衣服被他喝掉了。”这句话在语法上是没有问题的。模型在几种语言上都能完成这类任务。对BERT模型的抽象能力研究显示，BERT能够泛化语法类别。</li>
+<li>大模型习得构建：证据显示，大模型习得了句法构建，对介词有敏感性，能够正确识别少见的句法构成是否符合语法。</li>
+</ol>
+<ul>
+<li><strong>大模型能够预测人类语言网络的活动</strong></li>
+</ul>
+<p>人脑语言网络是语言加工的专门脑区，表现出形式语言的标志，对短语、句子和自然陈述中的抽象层级规则敏感。语言网络也对特定的词汇共现性（co-occurrences）敏感，表明它不只是学习到规则，也学到了语言的模式。这种对语言和非语言信息输入的选择性及对语言规则和模式的敏感性可用于将形式语言能力操作化定义为人类语言网络中的计算。</p>
+<p>大模型和人脑语言网络的内部组织具有相似性。第一，大模型的内部结构跟语言网络类似，都是在抽象的语言单元（word或token）上进行操作；第二，在大模型的内部表征和语言网络的神经活动模式之间可以建立直接映射，通过这种映射可以根据模型来预测脑活动。因此，可以将大模型作为人类形式语言的模型。</p>
+<ol>
+<li><h2 id="大模型尚未掌握功能语言"><a href="#大模型尚未掌握功能语言" class="headerlink" title="大模型尚未掌握功能语言"></a>大模型尚未掌握功能语言</h2></li>
+</ol>
+<ul>
+<li>功能语言能力的四个核心分别是：<ul>
+<li>形式推理：包括逻辑和数学推理、计算思考、新颖问题解决。神经科学证据表明，语言和形式推理在认知系统上是分离的，即二者不具有依存关系。</li>
+<li>世界知识1：事实常识。有关智能体、物品、属性、动作、事件和想法的事实和常识知识。</li>
+<li>世界知识2：情境建模。沿时间维度动态追踪物品、智能体和事件的演变。</li>
+<li>社会推理：理解语言交换的社会背景。<ul>
+<li>比如“水！”这句简单的话在不同情境下可能具有多样化的含义，可能是顾客向服务员要水、母亲提醒孩子当心水等等。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>功能语言维度</th>
+<th>人</th>
+<th>大模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>形式推理</strong></td>
+<td>语言和推理依赖于不同的认知神经系统，形式推理依赖的脑区被称为“多重需求网络（multiple demanding network）”，这个脑区参与很多认知任务，如逻辑、数学推理、物理推理、代码理解等。多重需求网络的损伤程度与流体智力水平呈负相关。</td>
+<td>大模型在需要形式推理的任务上存在局限，如数学问题。GPT-3可以执行两位数加减法，但是对于三位数加法、两位数乘法这些更复杂的任务表现不好。大模型对于其训练数据分布以外的模式无法泛化。思维链可以部分解决这种泛化问题。</td>
+</tr>
+<tr>
+<td><strong>世界模型1：事实和常识知识</strong></td>
+<td>神经科学研究表明，大脑中的语言和语义知识（世界知识）存在分离。语言生成困难的患者也可能保有推理能力。而语义痴呆的患者虽然能够生成言语，却无法完成语义任务。</td>
+<td>大模型的世界知识表征存在如下缺陷：幻觉：产生错误表述。因为大模型本身的训练目标是继续生成句子，而不考虑句子是否符合事实。输出不一致：相同的prompt以不同方式呈现会引起不同反应，干扰性信息的呈现也会影响模型输出。大模型语料库中的常识性知识不足：因为网络文本中人们交流的内容更可能涉及新的、非常识性的信息。事实性信息经常更新，不是一成不变的。</td>
+</tr>
+<tr>
+<td><strong>世界模型2：情境追踪</strong></td>
+<td>人类的语言网络不能追踪句子水平以上的结构，这种跨越更长时间、对意义的整合发生在默认网络（default network，位于前额叶）。默认网络同时追踪语言和非语言的情境，表明情景建模不是特异于语言的功能。</td>
+<td>大模型的情境建模面临两个挑战：难以从连续多个句子中提取信息：可以通过提升大模型的背景窗口（context window，一次性能加工的词汇量）来解决，但对计算要求高。也可以通过层级加工的方式（比如读书时分章节做小结）来缓解信息规模剧增的影响。难以整合持续的输入来更新关于实体的状态信息。</td>
+</tr>
+<tr>
+<td><strong>社会推理</strong></td>
+<td>人脑存在专门加工社会信息的网络，如心理理论网络，用来推测他人的心理状态。心理理论对语言理解的贡献分成两类：参与加工语义内容。在非文字语言理解（如口头笑话等）理解上参与较多。</td>
+<td>大模型在不同的实用任务上表现不一：能够理解隐喻。不擅长解释讽刺、续写笑话。大模型的心理理论能力存在争议，支持和否定证据均存在。</td>
+</tr>
+</tbody></table>
+<ol>
+<li><h2 id="大模型改进方向：功能模块化"><a href="#大模型改进方向：功能模块化" class="headerlink" title="大模型改进方向：功能模块化"></a>大模型改进方向：功能模块化</h2></li>
+</ol>
+<p>根据人脑对形式语言和功能语言的分离加工特点，大模型要想取得思维能力，有以下建议：</p>
+<ul>
+<li>模块化设计：模仿人脑中形式语言和功能语言的分工。<ul>
+<li>途径1：架构模块化（architectural modularity），在系统架构中外显地构建两个模块。</li>
+<li>途径2：涌现模块化（emergent modularity），在训练过程中通过训练数据和目标函数自然引入分工不同的模块。</li>
+</ul>
+</li>
+<li>支持模块化的其他有效示例：<ul>
+<li>transformers架构：注意力多头机制。</li>
+<li>通过API调用外部工具，如计算器和其他执行特定结构化操作的模块。</li>
+</ul>
+</li>
+</ul>
+<h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a><strong>参考文献：</strong></h1><ul>
+<li>E. Fedorenko, S. T. Piantadosi, and E. A. F. Gibson, “Language is primarily a tool for communication rather than thought,” <em>Nature</em>, vol. 630, no. 8017, pp. 575–586, Jun. 2024, doi: <a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41586-024-07522-w">10.1038&#x2F;s41586-024-07522-w</a>.</li>
+<li>K. Mahowald, A. A. Ivanova, I. A. Blank, N. Kanwisher, J. B. Tenenbaum, and E. Fedorenko, “Dissociating language and thought in large language models,” <em>Trends in Cognitive Sciences</em>, vol. 28, no. 6, pp. 517–540, Jun. 2024, doi: <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.tics.2024.01.011">10.1016&#x2F;j.tics.2024.01.011</a>.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sophiewu9824.github.io/2024/11/05/%E8%AF%AD%E8%A8%80%E5%92%8C%E6%80%9D%E7%BB%B4/" data-id="cm3abxb0400074wqo8w5cdffu" data-title="大模型掌握形式语言而非思维" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" rel="tag">大模型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6/" rel="tag">认知神经科学</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/11/09/%E8%8B%8F%E4%B8%9C%E5%9D%A1%E4%BC%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          《苏东坡传》读书笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/11/03/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%99%BA%E8%83%BD%E4%BD%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">大模型智能体</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag">人工智能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%A0%E8%AE%B0/" rel="tag">传记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8E%86%E5%8F%B2/" rel="tag">历史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag">哲学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" rel="tag">大模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E7%90%86/" rel="tag">心理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%8F%E4%B9%89/" rel="tag">意义</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%BF%E6%B2%BB/" rel="tag">政治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/" rel="tag">智能体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A/" rel="tag">社会</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6/" rel="tag">认知神经科学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%A0%E8%AE%B0/" style="font-size: 13.33px;">传记</a> <a href="/tags/%E5%8E%86%E5%8F%B2/" style="font-size: 13.33px;">历史</a> <a href="/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 10px;">哲学</a> <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" style="font-size: 13.33px;">大模型</a> <a href="/tags/%E5%BF%83%E7%90%86/" style="font-size: 16.67px;">心理</a> <a href="/tags/%E6%84%8F%E4%B9%89/" style="font-size: 10px;">意义</a> <a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 10px;">政治</a> <a href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/" style="font-size: 10px;">智能体</a> <a href="/tags/%E7%A4%BE%E4%BC%9A/" style="font-size: 10px;">社会</a> <a href="/tags/%E8%AE%A4%E7%9F%A5%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6/" style="font-size: 10px;">认知神经科学</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">读书笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/09/%E8%8B%8F%E4%B8%9C%E5%9D%A1%E4%BC%A0/">《苏东坡传》读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/05/%E8%AF%AD%E8%A8%80%E5%92%8C%E6%80%9D%E7%BB%B4/">大模型掌握形式语言而非思维</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/03/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%99%BA%E8%83%BD%E4%BD%93/">大模型智能体</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/01/%E7%AA%81%E7%A0%B4%E5%A4%A9%E6%80%A7/">《突破天性》读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/14/%E7%A8%80%E7%BC%BA/">《稀缺》读书笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 WenyaWu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
