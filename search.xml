@@ -1250,4 +1250,41 @@
         <tag>思辨</tag>
       </tags>
   </entry>
+  <entry>
+    <title>提示工程</title>
+    <url>/2024/11/11/%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/</url>
+    <content><![CDATA[<p>提示工程（prompt engineering）学习资源：<br>    <a href="https://prompt-guide.xiniushu.com/">https://prompt-guide.xiniushu.com/</a></p>
+<p>常见提示方法：</p>
+<ol>
+<li><p>基础提示（base prompt）：是指直接向LLM提出问题或查询（query）的方法，无需任何工程改进来试图提升LLM的性能。在研究论文中一般用作基线对照来反映其他提示方法的改进效果，也被称为标准提示（standard prompt）或普通提示。</p>
+</li>
+<li><p>思维链提示（chain-of-thought, CoT)：将问题分解为更小、更易处理的子问题，通过一系列中间推理步骤来增强LLMs进行复杂推理的能力。</p>
+<p><img src="/.io//SophieBlog\source_posts\2024\11\提示工程\CoT.png" alt="思维链CoT"></p>
+<p>提出论文：J. Wei <em>et al.</em>, “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” <em>Advances in Neural Information Processing Systems</em>, vol. 35, pp. 24824–24837, Dec. 2022, Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html">https://proceedings.neurips.cc/paper_files&#x2F;paper&#x2F;2022&#x2F;hash&#x2F;9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html</a></p>
+<ul>
+<li><p>思维链提示的几种类型：</p>
+<ul>
+<li><p>零样本思维链（zero shot chain of thought, Zero-shot-CoT)提示过程：在问题的结尾附加“<a href="https://prompt-guide.xiniushu.com/intermediate/zero_shot_cot">Let’s think step by step</a>”。</p>
+</li>
+<li><p>完整的思维链提示其实包括2个步骤，分别是要求使用思维链推理、从思维链推理结果中的提取答案。</p>
+</li>
+<li><p>单样本或少样本思维链（one shot&#x2F; few shot chain of thought)：在问题前面或后面加上一个或几个样例及其解决过程的细化步骤。</p>
+</li>
+<li><p>自洽性（self-consistency）：同时独立生成多个思维链，取多数答案作为最终答案。多数投票似乎通常具有很好的性能。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>大模型</category>
+      </categories>
+      <tags>
+        <tag>大模型</tag>
+        <tag>提示词</tag>
+      </tags>
+  </entry>
 </search>
