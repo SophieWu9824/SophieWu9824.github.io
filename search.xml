@@ -449,8 +449,8 @@
 ]]></content>
       <categories>
         <category>文献</category>
-        <category>LLM</category>
-        <category>agent</category>
+        <category>大模型</category>
+        <category>智能体</category>
       </categories>
       <tags>
         <tag>大模型</tag>
@@ -1197,7 +1197,7 @@
 ]]></content>
       <categories>
         <category>文献</category>
-        <category>LLM</category>
+        <category>大模型</category>
       </categories>
       <tags>
         <tag>大模型</tag>
@@ -1259,7 +1259,7 @@
 <li><p>基础提示（base prompt）：是指直接向LLM提出问题或查询（query）的方法，无需任何工程改进来试图提升LLM的性能。在研究论文中一般用作基线对照来反映其他提示方法的改进效果，也被称为标准提示（standard prompt）或普通提示。</p>
 </li>
 <li><p>思维链提示（chain-of-thought, CoT)：将问题分解为更小、更易处理的子问题，通过一系列中间推理步骤来增强LLMs进行复杂推理的能力。</p>
-<p><img src="/_images/CoT.png" alt="图片" title="CoT"></p>
+<p><a href="https://github.com/SophieWu9824/blog_images/blob/e41dd06fcbefb7dc4717ff827a7f069a4d882259/image_pool/CoT.png">https://github.com/SophieWu9824/blog_images/blob/e41dd06fcbefb7dc4717ff827a7f069a4d882259/image_pool/CoT.png</a></p>
 <ul>
 <li><p>提出论文：J. Wei <em>et al.</em>, “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” <em>Advances in Neural Information Processing Systems</em>, vol. 35, pp. 24824–24837, Dec. 2022, Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html">https://proceedings.neurips.cc/paper_files&#x2F;paper&#x2F;2022&#x2F;hash&#x2F;9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html</a></p>
 </li>
