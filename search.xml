@@ -49,16 +49,74 @@
   <entry>
     <title>提示工程</title>
     <url>/2024/11/11/%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/</url>
-    <content><![CDATA[<p>提示工程（prompt engineering）学习资源：<br>    <a href="https://prompt-guide.xiniushu.com/">https://prompt-guide.xiniushu.com/</a></p>
-<p>常见提示方法：</p>
-<ol>
-<li><p>基础提示（base prompt）：是指直接向LLM提出问题或查询（query）的方法，无需任何工程改进来试图提升LLM的性能。在研究论文中一般用作基线对照来反映其他提示方法的改进效果，也被称为标准提示（standard prompt）或普通提示。</p>
+    <content><![CDATA[<p>本文是一篇学习笔记，调研了关于提示工程（prompt engineering）的基础知识、常见提示方法以及应用场景，文末附加相关的在线学习资源。</p>
+<span id="more"></span>
+
+<h1 id="1-基础概念"><a href="#1-基础概念" class="headerlink" title="1. 基础概念"></a>1. 基础概念</h1><p>提示工程（prompt engineering, PE）是一门关注提示词（prompt）开发和优化的新兴工程学科。提示词就是用户跟大语言模型（large language model, LLM）的交互途径，可以简单理解为我们给AI的指令，而PE的目的就是如何给出指令，来让LLM更好地完成我们需要它完成的任务。PE相关技能可以在一定程度上提升LLM在多重场景下处理复杂任务的能力，帮助我们利用LLM赋能工作和生活。</p>
+<p>使用提示词的渠道一般是通过API（Application Programming Interface）或对话框跟LLM交互。</p>
+<ul>
+<li>模型参数：给定同样的prompt，调整如下模型参数时，模型的响应（response）可能会变化。<ul>
+<li>温度（temperature）：温度参数值越小，模型返回结果确定性越强。反之，温度越高，结果相对更随机，也更多样化和有创造性。根据任务类型不同，设置合适的温度参数，比如对于推理计算任务，设置更低的温度使得模型返回确切的结果；对于诗歌生成任务，调高温度增强创造性。</li>
+<li>Top_p：核采样（nucleus sampling）技术，意思是会考虑top_p概率质量的词元（tokens），参数值较小时会选择最有信心的响应。Top_p和温度参数一般调节一个就行。</li>
+<li>Max Length：控制LLM生成的token数上限，防止生成冗长、无关的响应，控制成本。</li>
+<li>Stop Sequences：字符串，用来阻止模型继续生成token，遇到该字符串即终止。</li>
+<li>Frequency Penalty：对下一个生成的token进行惩罚，通过给重复数量多的token设置更高的惩罚来减少响应中单词的重复。</li>
+<li>Presence Penalty：对重复的token施加惩罚，对所有重复的token惩罚是相同的。</li>
+</ul>
 </li>
+<li>提示工程：通过调整优化prompt来使LLM完成期望任务的过程。</li>
+<li>Prompt类型：针对GPT系列模型<ul>
+<li>system prompt: 用于设定assistant的整体行为和角色定位，帮助模型了解用户需求。</li>
+<li>user_prompt: 用户输入信息，用于提出问题或查询。</li>
+<li>assistant_prompt: 对LLM如何根据用户问题给出回答进行限定和要求。</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-提示设计"><a href="#2-提示设计" class="headerlink" title="2 提示设计"></a>2 提示设计</h1><p>在prompt中增加背景（context，上下文）信息能帮助LLM更好地理解用户意图，从而给出更贴切的回答。背景信息可能是详细描述，也包括案例演示。根据案例有无分成如下几类：</p>
+<ul>
+<li><p>零样本提示（zero-shot prompt）：直接提问，不提供示例。</p>
+<p>​	</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Q:&lt;问题&gt;?</span><br><span class="line">A:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>单样本提示（one-shot prompt）：提供一个示例。</p>
+<p>​	</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Q1:&lt;样例问题&gt;?</span><br><span class="line">A1:&lt;样例回答&gt;</span><br><span class="line">Q:&lt;&gt;?</span><br><span class="line">A:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>少样本提示 （few-shot prompt）：提供几个不同的示例。</p>
+</li>
+</ul>
+<p>Prompt的构成要素：并非所有要素都必须，根据具体任务而定。</p>
+<ul>
+<li>指令：需要模型执行的特定任务和要求。</li>
+<li>上下文：包含外部信息或额外的上下文信息，引导模型更好地回应。</li>
+<li>输入数据：用户输入的问题。</li>
+<li>输出提示：制定输出的类型或格式。</li>
+</ul>
+<p>Prompt设计技巧：</p>
+<ul>
+<li>迭代：从简单的提示词开始，根据效果逐渐调整迭代，添加需要的元素和上下文。如果任务复杂，可以先做分解，从局部开始逐渐完成。</li>
+<li>指令：将指令放在开头（一说放在结尾），建议使用特殊符号（如###）将指令和上下文分隔开。</li>
+<li>具体性：任务描述和指令需要具体详细，如果对生成结果的风格等细节有要求，更要注意提示词的具体性。但是要注意具体和冗长的区别，所包含的细节要是必要的。</li>
+<li>简明直接：不要绕弯子，直截了当表明意图，说要做什么，而不是不要做什么。</li>
+</ul>
+<p>Prompt应用场景举例：</p>
+<ul>
+<li>文本概括：将文章和概念概括成简洁易读的文本摘要。</li>
+<li>信息抽取（数据结构化）：LLM很擅长执行NLP的任务，从给定的自然语言文本中提取出想要的信息。</li>
+<li>问答：</li>
+<li>文本分类：比如对文本的情绪进行分类。可能需要给出几个示例帮助LLM更好地完成分类。</li>
+<li>对话：聊天机器人。给LLM设定角色定位、对话风格，指定意图身份，构建对话系统（比如客服）。也称为角色提示（role prompting）。</li>
+<li>代码生成：支持多种计算机语言。比如github的Copilot。</li>
+<li>推理：LLM在数学推理方面表现不佳，需要一些高级的提示工程技术辅助。</li>
+<li>文本生成：比如邮件、博客代写，但是如果要求质量就需要人的积极参与。</li>
+</ul>
+<h1 id="3-提示方法"><a href="#3-提示方法" class="headerlink" title="3. 提示方法"></a>3. 提示方法</h1><p>基础提示（base prompt）：是指直接向LLM提出问题或查询（query）的方法，无需任何工程改进来试图提升LLM的性能。在研究论文中一般用作基线对照来反映其他提示方法的改进效果，也被称为标准提示（standard prompt）或普通提示。</p>
+<p>上面提示设计部分提到的零样本和少样本提示都可以用于基础提示中。本部分主要介绍以基础提示作为Baseline，研究人员进一步提出的相对高阶的prompt方法，比如思维链CoT等。</p>
+<ol>
 <li><p>思维链提示（chain-of-thought, CoT)：将问题分解为更小、更易处理的子问题，通过一系列中间推理步骤来增强LLMs进行复杂推理的能力。</p>
 <p><img src="/2024/11/11/%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/CoT.png" alt="思维链CoT"></p>
 <p>提出论文：J. Wei <em>et al.</em>, “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” <em>Advances in Neural Information Processing Systems</em>, vol. 35, pp. 24824–24837, Dec. 2022, Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html">https://proceedings.neurips.cc/paper_files&#x2F;paper&#x2F;2022&#x2F;hash&#x2F;9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html</a></p>
-<ul>
-<li><p>思维链提示的几种类型：</p>
+<p>思维链提示的几种类型：</p>
 <ul>
 <li><p>零样本思维链（zero shot chain of thought, Zero-shot-CoT)提示过程：在问题的结尾附加“<a href="https://prompt-guide.xiniushu.com/intermediate/zero_shot_cot">Let’s think step by step</a>”。</p>
 </li>
@@ -66,13 +124,55 @@
 </li>
 <li><p>单样本或少样本思维链（one shot&#x2F; few shot chain of thought)：在问题前面或后面加上一个或几个样例及其解决过程的细化步骤。</p>
 </li>
-<li><p>自洽性（self-consistency）：同时独立生成多个思维链，取多数答案作为最终答案。多数投票似乎通常具有很好的性能。</p>
-</li>
 </ul>
 </li>
-</ul>
+<li><p>自一致性：（self-consistency）：少样本CoT，同时独立生成多个思维链，取多数答案作为最终答案。多数投票似乎通常具有很好的性能。</p>
+</li>
+<li><p>思维树（Tree-of-Thought, ToT）：</p>
+</li>
+<li><p>检索增强生成（Retrieval-Augmented-Generation, RAG）：</p>
+</li>
+<li><p>自动<u>推理并使用工具</u>（Autonomous-Reason-and-Action, ART）：</p>
+</li>
+<li><p>自动提示：</p>
+</li>
+<li><p>ReAct框架：</p>
+</li>
+<li><p>反思（Reflexion）：</p>
 </li>
 </ol>
+<h1 id="4-在线学习资源"><a href="#4-在线学习资源" class="headerlink" title="4. 在线学习资源"></a>4. 在线学习资源</h1><ul>
+<li><p><a href="https://prompt-guide.xiniushu.com/">https://prompt-guide.xiniushu.com/</a></p>
+</li>
+<li><p><a href="https://www.promptingguide.ai/zh">https://www.promptingguide.ai/zh</a></p>
+</li>
+<li><p><a href="https://github.com/dair-ai/Prompt-Engineering-Guide">https://github.com/dair-ai/Prompt-Engineering-Guide</a></p>
+</li>
+<li></li>
+</ul>
+<h1 id="5-LLM产品体验"><a href="#5-LLM产品体验" class="headerlink" title="5. LLM产品体验"></a>5. LLM产品体验</h1><p>基于LLM的产品粗略调研，包括产品分类（领域）、创新点、盈利模式和现况等。</p>
+<table>
+<thead>
+<tr>
+<th align="center">LLM产品名称</th>
+<th>领域</th>
+<th>创新点</th>
+<th>盈利模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://kimi.moonshot.cn/?data_source=tracer&utm_campaign=TR_E1sRltzI&utm_content=&utm_medium=%E5%BE%AE%E8%BD%AFbing&utm_source=bing&utm_term=%E5%B7%A5%E7%A8%8B&msclkid=79a97425471115faee731314ad600958">kimi</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>学习笔记</category>
