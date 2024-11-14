@@ -394,7 +394,18 @@
   <entry>
     <title>Markdown语法练习</title>
     <url>/2024/11/14/Markdown%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>标题编号：</p>
+    <content><![CDATA[<p>Markdown 是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由 John Gruber 于 2004 年创建，如今已成为世界上最受欢迎的标记语言之一。</p>
+<ol>
+<li>专注于文字内容；</li>
+<li>纯文本，易读易写，可以方便地纳入版本控制；</li>
+<li>语法简单，没有什么学习成本，能轻松在码字的同时做出美观大方的排版。</li>
+</ol>
+<p><a href="https://markdown.com.cn/">Markdown教程</a></p>
+<p><a href="https://markdown.com.cn/editor/">Markdown在线编辑器</a></p>
+<span id="more"></span>
+
+<hr>
+<p>标题编号：</p>
 <h3 id="My-great-heading"><a href="#My-great-heading" class="headerlink" title="My great heading"></a>My great heading</h3><hr>
 <p>删除线：</p>
 <p><del>删除线</del></p>
@@ -404,8 +415,6 @@
 <li><input checked disabled type="checkbox"> update</li>
 <li><input checked disabled type="checkbox"> write</li>
 </ul>
-<span id="more"></span>
-
 <hr>
 <p>内嵌HTML语法：</p>
 <p>标题：标题#号之后需要有空格</p>
