@@ -493,7 +493,8 @@ Markdown learn</p>
 <p>html:</p>
 <h6 id="custom-id">my great heading</h6>
 
-<h6 id="my-great-heading"><a href="#my-great-heading" class="headerlink" title="my great heading"></a>my great heading</h6><p>(#Owel)</p>
+<h6 id="my-great-heading"><a href="#my-great-heading" class="headerlink" title="my great heading"></a>my great heading</h6><p>注意：博文里包含<u>{+#</u>字符，就会出现无法hexo g的情况，报错“<a href="https://github.com/D0n9X1n/hexo-blog-encrypt/issues/170">Template render error</a> …”</p>
+<p>(#Owel)</p>
 <p>链接到自定义id：似乎没有效果</p>
 <p><a href="#test">heading id</a></p>
 <hr>
