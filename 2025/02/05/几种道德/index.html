@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sophiewu9824.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="[电车难题（Trolley Problem）](电车难题（Trolley Problem）)是伦理学领域一个有名的思想实验，相信很多人都听说过，内容是：一个疯子把五个无辜的人绑在电车轨道上。一辆失控的电车朝他们驶来，并且片刻后就要碾压到他们。幸运的是，你可以拉一个拉杆，让电车开到另一条轨道上。然而问题在于，那个疯子在另一个电车轨道上也绑了一个人。考虑以上状况，你是否应拉拉杆？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="几种道德">
+<meta property="og:url" content="https://sophiewu9824.github.io/2025/02/05/%E5%87%A0%E7%A7%8D%E9%81%93%E5%BE%B7/index.html">
+<meta property="og:site_name" content="Sophie Wu">
+<meta property="og:description" content="[电车难题（Trolley Problem）](电车难题（Trolley Problem）)是伦理学领域一个有名的思想实验，相信很多人都听说过，内容是：一个疯子把五个无辜的人绑在电车轨道上。一辆失控的电车朝他们驶来，并且片刻后就要碾压到他们。幸运的是，你可以拉一个拉杆，让电车开到另一条轨道上。然而问题在于，那个疯子在另一个电车轨道上也绑了一个人。考虑以上状况，你是否应拉拉杆？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sophiewu9824.github.io/2025/02/05/%E5%87%A0%E7%A7%8D%E9%81%93%E5%BE%B7/%E7%94%B5%E8%BD%A6%E9%9A%BE%E9%A2%98.png">
+<meta property="article:published_time" content="2025-02-05T03:57:56.000Z">
+<meta property="article:modified_time" content="2025-02-09T06:05:50.630Z">
+<meta property="article:author" content="吴文雅">
+<meta property="article:tag" content="成长">
+<meta property="article:tag" content="哲学">
+<meta property="article:tag" content="观察">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sophiewu9824.github.io/2025/02/05/%E5%87%A0%E7%A7%8D%E9%81%93%E5%BE%B7/%E7%94%B5%E8%BD%A6%E9%9A%BE%E9%A2%98.png">
+
+<link rel="canonical" href="https://sophiewu9824.github.io/2025/02/05/%E5%87%A0%E7%A7%8D%E9%81%93%E5%BE%B7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>几种道德 | Sophie Wu</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Sophie Wu</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Beauty always leads us to truth.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sophiewu9824.github.io/2025/02/05/%E5%87%A0%E7%A7%8D%E9%81%93%E5%BE%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="吴文雅">
+      <meta itemprop="description" content="且将新火试新茶，诗酒趁年华">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sophie Wu">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          几种道德
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-02-05 11:57:56" itemprop="dateCreated datePublished" datetime="2025-02-05T11:57:56+08:00">2025-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-09 14:05:50" itemprop="dateModified" datetime="2025-02-09T14:05:50+08:00">2025-02-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%9B%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">创作</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%9B%E4%BD%9C/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>[电车难题（Trolley Problem）](电车难题（Trolley Problem）)是伦理学领域一个有名的思想实验，相信很多人都听说过，内容是：一个疯子把五个无辜的人绑在电车轨道上。一辆失控的电车朝他们驶来，并且片刻后就要碾压到他们。幸运的是，你可以拉一个拉杆，让电车开到另一条轨道上。然而问题在于，那个疯子在另一个电车轨道上也绑了一个人。考虑以上状况，你是否应拉拉杆？</p>
+<span id="more"></span>
+
+<p><img src="/2025/02/05/%E5%87%A0%E7%A7%8D%E9%81%93%E5%BE%B7/%E7%94%B5%E8%BD%A6%E9%9A%BE%E9%A2%98.png" alt="电车难题"></p>
+<p>一方面，如果选择拉杆，整体上存活的人数更多，但是近乎谋杀了躺在另一个电轨上的人会带来道义上的内疚感；另一方面，如果选择不拉杆，这种不作为让我们在道德上无从受到谴责，但是却浪费了本来可以多救几条人命的机会。这个典型的道德困境虽然看起来与日常生活相距甚远，但是其中蕴含的问题却会以其他面貌潜入到我们面临的真实决策中。电车难题这个问题涉及的是<strong>功利主义</strong>和<strong>道义主义</strong>的冲突，从功利的角度应该最大化整体收益，所以选择拉杆才符合功利主义观念下的道德；而从道义的角度我们无权主动去剥夺另一个无辜的人的生命，尽管这是为了拯救其他五个人，所以选择不拉杆才符合道义主义观念下的道德。</p>
+<p>功利主义和道义主义两种道德观展现的是从不同角度出发，道德会有不同的判定标准。除此以外，道德的定义也会因立场不同而有差异，也就是谁来定义道德，谁的道德才是“最道德的”？尼采对这个问题给出了主人道德和奴隶道德的分类。本文探讨了道德判定标准和谁来定义道德这两个道德话题，进一步结合一个日常生活的案例进行分析。内容主要由GPT-4o根据提示问题生成（在这个问题上主观感受是GPT-4o水平高于DeepSeek-Chat）。</p>
+<h1 id="道德原则-判定标准"><a href="#道德原则-判定标准" class="headerlink" title="道德原则&#x2F;判定标准"></a>道德原则&#x2F;判定标准</h1><h2 id="功利主义（Utilitarianism）"><a href="#功利主义（Utilitarianism）" class="headerlink" title="功利主义（Utilitarianism）"></a>功利主义（Utilitarianism）</h2><p> 功利主义是一种结果主义（consequentialism）道德理论，其核心原则是<strong>“最大化幸福”</strong>或<strong>“最大化效用”</strong>。也就是说，一个行为的道德价值取决于它所带来的结果，好的行为是能够产生最大幸福（或最少痛苦）的行为。</p>
+<ul>
+<li>代表人物：边沁（Jeremy Bentham）、密尔（John Stuart Mill）。</li>
+<li>主要原则：<strong>最大幸福原则（Greatest Happiness Principle）</strong>——一个行为的道德价值取决于它是否能够为最多的人带来最大程度的幸福。</li>
+<li>典型例子：<ul>
+<li>如果一个医生能通过杀死一个健康人来挽救五个病人的生命，功利主义可能会认为这是道德的，因为它带来了<strong>总体上更大的幸福</strong>。</li>
+<li>在决策过程中，功利主义者倾向于<strong>计算成本和收益</strong>，以最大化整体利益。</li>
+</ul>
+</li>
+</ul>
+<h2 id="道义主义（Deontological-Ethics）"><a href="#道义主义（Deontological-Ethics）" class="headerlink" title="道义主义（Deontological Ethics）"></a>道义主义（Deontological Ethics）</h2><p> 道义主义的核心理念是<strong>道德义务和普遍原则</strong>，强调行为本身的正当性，而不是其带来的后果。一个行为是否道德取决于它是否符合普遍道德原则或义务，而不是是否带来了更好的结果。</p>
+<ul>
+<li>代表人物：康德（Immanuel Kant）。</li>
+<li>主要原则：<ul>
+<li><strong>道德律令（Categorical Imperative）</strong>——“你只能按照你希望成为普遍法则的准则行事。”（即行为必须符合普遍可接受的道德规则）</li>
+<li>人不能被当作手段，而应被视为目的。</li>
+</ul>
+</li>
+<li>典型例子：<ul>
+<li>在前述医生的案例中，道义主义者会反对杀死一人拯救五人，因为杀人本身是一种道德错误，即使它带来了更大的整体幸福。</li>
+<li>在决策过程中，道义主义者通常更强调<strong>原则、义务和权利</strong>，而非具体的后果。</li>
+</ul>
+</li>
+</ul>
+<h1 id="谁来定义道德"><a href="#谁来定义道德" class="headerlink" title="谁来定义道德"></a>谁来定义道德</h1><p>尼采（Friedrich Nietzsche）在《道德的谱系》（On the Genealogy of Morals）等著作中提出了<strong>主人道德（Master Morality）**和**奴隶道德（Slave Morality）**的概念。他认为，道德体系并非天生普遍存在，而是由不同群体创造出来的，其中主人道德和奴隶道德分别反映了**强者<strong>和</strong>弱者</strong>的价值观。</p>
+<h2 id="主人道德（Master-Morality）"><a href="#主人道德（Master-Morality）" class="headerlink" title="主人道德（Master Morality）"></a>主人道德（Master Morality）</h2><h3 id="主人道德的来源"><a href="#主人道德的来源" class="headerlink" title="主人道德的来源"></a>主人道德的来源</h3><p>主人道德起源于<strong>贵族阶层、统治者、强者</strong>，他们在历史上占据主导地位，不受外部约束，可以自由确立自己的价值体系。这些人是<strong>主动的价值创造者</strong>，他们按照自身的生命力和权力意志来界定什么是“善”与“恶”。</p>
+<h3 id="主人道德的核心价值观"><a href="#主人道德的核心价值观" class="headerlink" title="主人道德的核心价值观"></a>主人道德的核心价值观</h3><p>主人道德的价值观建立在<strong>自身的强大、自信和创造力</strong>之上，而非对他人的反应：</p>
+<ul>
+<li><strong>善（Good）&#x3D; 高贵、强大、勇敢、卓越、成功、独立、自我肯定</strong></li>
+<li><strong>恶（Bad）&#x3D; 软弱、懦弱、失败、卑微、依赖、服从</strong></li>
+<li><strong>主动性</strong>：主人道德的人不依赖于外部标准来评判自己的价值，而是<strong>自己决定何为善恶</strong>。</li>
+<li><strong>肯定生命</strong>：主人道德鼓励个体追求力量、扩展自身能力，而不是压抑自己的欲望或牺牲自己。</li>
+</ul>
+<p>尼采认为，古希腊和罗马的贵族阶层是典型的主人道德代表。例如，古希腊的<strong>贵族战士文化</strong>推崇<strong>力量、荣誉、英雄主义</strong>，认为卓越和胜利是值得赞美的。</p>
+<h3 id="主人道德的典型特征"><a href="#主人道德的典型特征" class="headerlink" title="主人道德的典型特征"></a>主人道德的典型特征</h3><ul>
+<li><strong>个体主义</strong>：主人道德者相信个人的价值和卓越，而不是群体的平均化。</li>
+<li><strong>强者为善</strong>：他们不会怜悯弱者，而是认为强者和成功者本身就是道德的体现。</li>
+<li><strong>无怨无悔</strong>：主人道德者不会因为自己的优势而感到内疚，也不会屈服于外界的批评。</li>
+<li><strong>创造新价值</strong>：他们不依赖外部道德体系，而是自己制定价值标准。</li>
+</ul>
+<h2 id="奴隶道德（Slave-Morality）"><a href="#奴隶道德（Slave-Morality）" class="headerlink" title="奴隶道德（Slave Morality）"></a>奴隶道德（Slave Morality）</h2><h3 id="奴隶道德的来源"><a href="#奴隶道德的来源" class="headerlink" title="奴隶道德的来源"></a>奴隶道德的来源</h3><p>奴隶道德起源于<strong>社会中的弱者、被压迫者、奴隶和受害者</strong>，他们无法与强者直接对抗，因此转而采用一种<strong>反动式（reactive）</strong>的道德体系，来削弱和批判强者的价值观。</p>
+<ul>
+<li>奴隶道德的形成是<strong>被动的</strong>，它不是主动创造出的，而是为了反抗主人道德而诞生的。</li>
+<li>这种道德体系主要是<strong>对强者的反感和怨恨（Ressentiment）</strong>的产物。</li>
+</ul>
+<h3 id="奴隶道德的核心价值观"><a href="#奴隶道德的核心价值观" class="headerlink" title="奴隶道德的核心价值观"></a>奴隶道德的核心价值观</h3><p>奴隶道德通过<strong>重新定义“善”与“恶”</strong>，将强者的特质贬低，而将弱者的特质美化：</p>
+<ul>
+<li><strong>善（Good）&#x3D; 谦逊、顺从、同情、怜悯、牺牲、平等</strong></li>
+<li><strong>恶（Evil）&#x3D; 强大、骄傲、统治、独立、享乐</strong></li>
+<li><strong>反动性</strong>：奴隶道德不是独立建立的，而是为了<strong>对抗主人道德</strong>而形成的。</li>
+<li><strong>贬低生命</strong>：奴隶道德教导人们压抑自身的欲望，否定自己的本能力量，并认为自我牺牲是一种美德。</li>
+</ul>
+<h3 id="奴隶道德的典型特征"><a href="#奴隶道德的典型特征" class="headerlink" title="奴隶道德的典型特征"></a>奴隶道德的典型特征</h3><ul>
+<li><strong>强调平等</strong>：奴隶道德试图消除个体之间的差异，认为所有人都是一样的。</li>
+<li><strong>怨恨心理</strong>：奴隶道德者通常对强者充满怨恨（Ressentiment），但他们不会直接反抗，而是采用道德手段来削弱强者。</li>
+<li><strong>受害者心态</strong>：奴隶道德者强调自己是受害者，并利用道德谴责来让强者感到内疚。</li>
+<li><strong>普遍主义</strong>：奴隶道德往往追求一种“普遍适用的道德”，要求所有人都遵循相同的道德标准，而不考虑个人的差异。</li>
+</ul>
+<p>尼采认为，<strong>基督教道德是典型的奴隶道德</strong>，因为它强调<strong>谦逊、顺服、苦难、怜悯</strong>，并反对自豪、享乐和强者的统治。他认为基督教的“爱你的敌人”“转过另一边脸”等教义是奴隶道德用来控制强者的手段。</p>
+<h2 id="主人道德-vs-奴隶道德"><a href="#主人道德-vs-奴隶道德" class="headerlink" title="主人道德 vs. 奴隶道德"></a>主人道德 vs. 奴隶道德</h2><table>
+<thead>
+<tr>
+<th><strong>对比维度</strong></th>
+<th><strong>主人道德（Master Morality）</strong></th>
+<th><strong>奴隶道德（Slave Morality）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>起源</strong></td>
+<td>贵族、强者、统治者</td>
+<td>被压迫者、弱者、奴隶</td>
+</tr>
+<tr>
+<td><strong>价值观</strong></td>
+<td>力量、高贵、勇敢、独立、自信</td>
+<td>谦逊、顺从、牺牲、平等、怜悯</td>
+</tr>
+<tr>
+<td><strong>道德性质</strong></td>
+<td>主动创造价值</td>
+<td>反动式道德（对强者的否定）</td>
+</tr>
+<tr>
+<td><strong>善的定义</strong></td>
+<td>强大、卓越、自主、自豪</td>
+<td>谦卑、忍耐、同情、服从</td>
+</tr>
+<tr>
+<td><strong>恶的定义</strong></td>
+<td>软弱、懦弱、卑微、依赖</td>
+<td>强者的价值观</td>
+</tr>
+<tr>
+<td><strong>个体 vs. 群体</strong></td>
+<td>个人主义，强调个体卓越</td>
+<td>群体主义，强调平等</td>
+</tr>
+<tr>
+<td><strong>道德的动力</strong></td>
+<td>生命的肯定，主动创造价值</td>
+<td>充满怨恨（Ressentiment），用道德手段对抗强者</td>
+</tr>
+<tr>
+<td><strong>代表文化</strong></td>
+<td>古希腊贵族文化、战士道德</td>
+<td>基督教道德、民主平等观</td>
+</tr>
+</tbody></table>
+<h2 id="主人道德与奴隶道德的影响"><a href="#主人道德与奴隶道德的影响" class="headerlink" title="主人道德与奴隶道德的影响"></a>主人道德与奴隶道德的影响</h2><p>尼采认为，随着时间推移，奴隶道德在西方世界占据主导地位，<strong>现代道德观念大多是奴隶道德的延续</strong>。例如：</p>
+<ul>
+<li><strong>基督教道德</strong>：强调爱、牺牲、顺从、平等，与奴隶道德高度一致。</li>
+<li><strong>现代民主制度</strong>：强调普遍平等，削弱个体卓越，与奴隶道德一致。</li>
+<li><strong>社会正义运动</strong>：某些平权运动强调受害者的道德优越性，这也是奴隶道德的一种表现。</li>
+</ul>
+<p>尼采担忧，<strong>奴隶道德的统治会导致人类的“平庸化”</strong>，扼杀个体的创造力和生命力。他提出了“超人”（Übermensch）的概念，希望人类能摆脱奴隶道德的束缚，重新创造属于自己的价值体系。</p>
+<p>总体而言，<strong>主人道德</strong>强调力量、卓越和个体创造，代表强者的道德观；而<strong>奴隶道德</strong>强调平等、顺从和怜悯，代表弱者的道德观。现代社会的许多道德规范受到奴隶道德的影响，尼采希望人类能超越这种道德体系，重建更强大的价值观。</p>
+<h1 id="道德原则与道德定义的联系"><a href="#道德原则与道德定义的联系" class="headerlink" title="道德原则与道德定义的联系"></a>道德原则与道德定义的联系</h1><p><strong>主人道德不太符合功利主义或道义主义</strong>，因为它是<strong>自我中心的、个体至上的</strong>，强调自身价值的创造，而不是追求群体最大幸福（功利主义）或普遍义务（道义主义）。但主人道德在某些方面与康德的“自律”观念相似，因为它强调个体确立自身的价值，而不是服从外部标准。</p>
+<p><strong>奴隶道德更接近道义主义</strong>，因为它强调平等、同情、普遍性等道德原则，这些与康德的普遍道德法则相契合。奴隶道德也可能与某种形式的功利主义契合，特别是当功利主义强调群体利益时。比如，它提倡牺牲个体利益以换取群体幸福，这可能符合某种“规则功利主义”（Rule Utilitarianism）。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>功利主义</th>
+<th>道义主义</th>
+<th>主人道德</th>
+<th>奴隶道德</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>核心原则</strong></td>
+<td>追求最大幸福</td>
+<td>遵循道德义务</td>
+<td>强者确立自身价值</td>
+<td>反动式地谴责强者</td>
+</tr>
+<tr>
+<td><strong>决策方式</strong></td>
+<td>计算结果是否有利</td>
+<td>判断是否符合道德律令</td>
+<td>个人力量与卓越至上</td>
+<td>服从、忍耐、同情</td>
+</tr>
+<tr>
+<td><strong>个人 vs. 集体</strong></td>
+<td>倾向于集体利益</td>
+<td>倾向于普遍原则</td>
+<td>强调个人卓越</td>
+<td>强调群体平等</td>
+</tr>
+<tr>
+<td><strong>与现代社会的关系</strong></td>
+<td>影响现代政策决策（如最大化社会福利）</td>
+<td>影响法律、权利观（如人权）</td>
+<td>影响精英文化、个人主义</td>
+<td>影响平等主义、社会正义运动</td>
+</tr>
+</tbody></table>
+<p>综合来看，功利主义和道义主义是现代伦理学的两大主流理论，它们以不同方式试图建立普遍的道德原则。而尼采的主人道德与奴隶道德则更多是一种历史哲学视角，试图解释不同社会群体如何构建和传播道德体系。这两者的关系并不完全契合，但在特定方面可以找到重叠和对立之处。</p>
+<h1 id="道德困境模拟"><a href="#道德困境模拟" class="headerlink" title="道德困境模拟"></a>道德困境模拟</h1><p>场景：有一个新的、可能更有潜力的工作和发展机会，小A需要辞掉现在的这份工作，但是在当前这份工作中有一些帮助过ta很多的同事，辞掉这份工作让小A感到对他们很内疚，此外上级也承诺后续会解决之前存在的问题并提供更好的机会来满足小A的发展需要。从功利主义、道义主义的道德原则以及主人道德、奴隶道德的角度来分析这个情境。</p>
+<h2 id="功利主义分析（Utilitarianism）"><a href="#功利主义分析（Utilitarianism）" class="headerlink" title="功利主义分析（Utilitarianism）"></a>功利主义分析（Utilitarianism）</h2><p><strong>功利主义</strong>强调<strong>最大化整体幸福</strong>，小A选择应基于哪种决定能带来<strong>最大净收益</strong>。</p>
+<ul>
+<li><strong>留在当前工作</strong>：小A能与同事继续交往，上级承诺的发展机会可能会满足小A职业目标，但也有可能未必兑现，长期发展潜力可能受限。</li>
+<li><strong>接受新机会</strong>：可能获得更大的职业成长和发展空间，但可能让现有同事失望，同时短期内对团队带来一定负面影响。</li>
+</ul>
+<p><strong>功利主义的决策方法</strong>：</p>
+<ol>
+<li>短期影响<ul>
+<li>离职可能让同事和上级感到失落，团队可能短暂出现不适应。</li>
+<li>小A可能感到一时内疚，但如果新机会更好，其幸福感可能增加。</li>
+</ul>
+</li>
+<li>长期影响<ul>
+<li>如果新机会提供更好的发展，职业成长将带来长期的个人和社会回报（更高薪资、更强影响力、更多价值创造）。</li>
+<li>小A离开可能会激励其他同事思考自己的职业发展，而其在新岗位上的成功也可能反过来帮助他们。</li>
+</ul>
+</li>
+</ol>
+<p><strong>功利主义结论：</strong> 如果新机会的长期收益<strong>大于</strong>短期损失（发展大幅提升，而对旧团队的影响可被缓冲），功利主义会支持小A选择新机会。</p>
+<h2 id="道义主义分析（Deontology）"><a href="#道义主义分析（Deontology）" class="headerlink" title="道义主义分析（Deontology）"></a>道义主义分析（Deontology）</h2><p><strong>道义主义</strong>（如康德的义务论）强调<strong>道德原则</strong>和<strong>责任</strong>，而不是最终的结果。</p>
+<ul>
+<li><strong>义务是什么？</strong><ul>
+<li>小A是否有义务对团队负责？（是否做出了承诺？）</li>
+<li>小A是否有义务追求更好的个人发展？</li>
+</ul>
+</li>
+<li><strong>普遍法则</strong>（Kantian Universalizability Test）：<ul>
+<li>如果每个人在更好的机会出现时都离开，是否会带来不良后果？如果这样做是普遍规则，是否符合道德？</li>
+<li>反过来，如果每个人都因内疚而不去追求更好的机会，这是否合理？</li>
+</ul>
+</li>
+<li><strong>尊重他人的理性</strong>：<ul>
+<li>小A对团队的责任是有限的，因为团队是一个工作合作体，每个人都有自己的职业选择权。</li>
+<li>小A的同事和上级都是理性个体，他们应该理解小A的选择，而不只是依赖ta做出妥协。</li>
+</ul>
+</li>
+</ul>
+<p><strong>道义主义结论：</strong> 如果小A之前做出过明确承诺（如短期内不会离职），可能有道义责任暂时留下。否则，没有绝对的道德义务必须留在原岗位，小A的职业发展对ta而言也是一种责任。</p>
+<h2 id="主人道德分析（Master-Morality）"><a href="#主人道德分析（Master-Morality）" class="headerlink" title="主人道德分析（Master Morality）"></a>主人道德分析（Master Morality）</h2><p><strong>主人道德</strong>强调<strong>强者、独立、卓越和自我创造价值</strong>，而不是被道德义务或群体期待所束缚。</p>
+<ul>
+<li>主人道德者会问：<strong>“这个决定能否让我变得更强大？能否帮助我实现更高的目标？”</strong></li>
+<li>他们不会因为别人的情感期待而限制自己的选择，而是主动塑造自己的道路。</li>
+<li>主人道德者尊重自己的力量和成长，而不会因“内疚”停滞不前。</li>
+</ul>
+<p><strong>在这个情境中</strong>：</p>
+<ul>
+<li>选择更好的工作机会是<strong>自我肯定</strong>的表现，应该按照自己的愿景去追求卓越，而不让“愧疚感”成为束缚自己的枷锁。</li>
+<li>小A的同事应该尊重ta的决策，而不是依赖其留在原岗位。小A的离开如果能让ta变得更强大，最终可能让ta回馈他们更多。</li>
+</ul>
+<p><strong>主人道德结论：</strong> 应该果断做出对自己最有利的选择，而不是被外界的期待和道德负担所左右。选择新机会符合主人道德。</p>
+<h2 id="奴隶道德分析（Slave-Morality）"><a href="#奴隶道德分析（Slave-Morality）" class="headerlink" title="奴隶道德分析（Slave Morality）"></a>奴隶道德分析（Slave Morality）</h2><p><strong>奴隶道德</strong>强调<strong>顺从、内疚感、牺牲和对强者的怨恨</strong>，它是由“弱者”创造的价值体系。</p>
+<ul>
+<li><strong>内疚感</strong>是一种奴隶道德的表现——它源于认为自己“欠”同事和上级，而不是自主选择自己的道路。</li>
+<li><strong>上级的承诺可能是一种控制手段</strong>，用未来的“更好机会”来让小A留下，而不是立即兑现小A值得的机会。</li>
+<li><strong>如果小A基于愧疚而留下，就是在服从一种被动的道德体系</strong>，而不是按照自己的意志行事。</li>
+</ul>
+<p><strong>在这个情境中</strong>：</p>
+<ul>
+<li>如果因为“怕让别人失望”而留下，这是<strong>典型的奴隶道德</strong>，因为是在为别人的利益牺牲自己的成长。</li>
+<li>如果害怕接受新机会带来的挑战，而选择安于现状，这也是奴隶道德，因为在逃避成为更强大的自己。</li>
+</ul>
+<p><strong>奴隶道德结论：</strong> 如果因内疚或害怕变动而留下，就是在屈服于奴隶道德。要避免被这种道德观束缚，应该勇敢追求机会。</p>
+<h2 id="综合结论和最终建议"><a href="#综合结论和最终建议" class="headerlink" title="综合结论和最终建议"></a>综合结论和最终建议</h2><ul>
+<li><strong>功利主义</strong>：如果新机会的长期收益更大，应该接受它。</li>
+<li><strong>道义主义</strong>：如果没有明确承诺或义务，没有道义责任留下。</li>
+<li><strong>主人道德</strong>：果断选择能让自己成长的道路，不让愧疚感阻碍自己。</li>
+<li><strong>奴隶道德</strong>：如果因内疚或害怕失去安逸而留下，就是在屈服于被动的道德体系。</li>
+</ul>
+<p>最终建议：</p>
+<ol>
+<li><strong>如果新机会符合你的长期发展目标，应该果断选择它</strong>。</li>
+<li><strong>离开时以职业化的方式处理关系</strong>，尽量减少对团队的影响，例如提供交接支持，表达感谢。</li>
+<li><strong>避免因“愧疚感”做出违背自己成长的决定</strong>，同事的成长不依赖于你，上级也不会为你的职业发展负责。</li>
+<li><strong>像主人道德者那样主动塑造自己的未来，而不是像奴隶道德者那样被动服从外界期待</strong>。</li>
+</ol>
+<p><strong>核心原则</strong>：<strong>“不要因为害怕失去，而放弃更好的可能性。”</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%88%90%E9%95%BF/" rel="tag"># 成长</a>
+              <a href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag"># 哲学</a>
+              <a href="/tags/%E8%A7%82%E5%AF%9F/" rel="tag"># 观察</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/02/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%9D%A1%E8%A7%89/" rel="prev" title="《我们为什么要睡觉》读书笔记">
+      <i class="fa fa-chevron-left"></i> 《我们为什么要睡觉》读书笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2025/02/08/%E6%95%99%E8%82%B2%E7%9A%84%E6%9C%AC%E8%B4%A8/" rel="next" title="教育的本质">
+      教育的本质 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%93%E5%BE%B7%E5%8E%9F%E5%88%99-%E5%88%A4%E5%AE%9A%E6%A0%87%E5%87%86"><span class="nav-number">1.</span> <span class="nav-text">道德原则&#x2F;判定标准</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89%EF%BC%88Utilitarianism%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">功利主义（Utilitarianism）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%93%E4%B9%89%E4%B8%BB%E4%B9%89%EF%BC%88Deontological-Ethics%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">道义主义（Deontological Ethics）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%81%E6%9D%A5%E5%AE%9A%E4%B9%89%E9%81%93%E5%BE%B7"><span class="nav-number">2.</span> <span class="nav-text">谁来定义道德</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7%EF%BC%88Master-Morality%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">主人道德（Master Morality）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="nav-number">2.1.1.</span> <span class="nav-text">主人道德的来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7%E7%9A%84%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82"><span class="nav-number">2.1.2.</span> <span class="nav-text">主人道德的核心价值观</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7%E7%9A%84%E5%85%B8%E5%9E%8B%E7%89%B9%E5%BE%81"><span class="nav-number">2.1.3.</span> <span class="nav-text">主人道德的典型特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7%EF%BC%88Slave-Morality%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">奴隶道德（Slave Morality）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="nav-number">2.2.1.</span> <span class="nav-text">奴隶道德的来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7%E7%9A%84%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82"><span class="nav-number">2.2.2.</span> <span class="nav-text">奴隶道德的核心价值观</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7%E7%9A%84%E5%85%B8%E5%9E%8B%E7%89%B9%E5%BE%81"><span class="nav-number">2.2.3.</span> <span class="nav-text">奴隶道德的典型特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7-vs-%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7"><span class="nav-number">2.3.</span> <span class="nav-text">主人道德 vs. 奴隶道德</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7%E4%B8%8E%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">2.4.</span> <span class="nav-text">主人道德与奴隶道德的影响</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%93%E5%BE%B7%E5%8E%9F%E5%88%99%E4%B8%8E%E9%81%93%E5%BE%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">道德原则与道德定义的联系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%93%E5%BE%B7%E5%9B%B0%E5%A2%83%E6%A8%A1%E6%8B%9F"><span class="nav-number">4.</span> <span class="nav-text">道德困境模拟</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89%E5%88%86%E6%9E%90%EF%BC%88Utilitarianism%EF%BC%89"><span class="nav-number">4.1.</span> <span class="nav-text">功利主义分析（Utilitarianism）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%93%E4%B9%89%E4%B8%BB%E4%B9%89%E5%88%86%E6%9E%90%EF%BC%88Deontology%EF%BC%89"><span class="nav-number">4.2.</span> <span class="nav-text">道义主义分析（Deontology）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E4%BA%BA%E9%81%93%E5%BE%B7%E5%88%86%E6%9E%90%EF%BC%88Master-Morality%EF%BC%89"><span class="nav-number">4.3.</span> <span class="nav-text">主人道德分析（Master Morality）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%B4%E9%9A%B6%E9%81%93%E5%BE%B7%E5%88%86%E6%9E%90%EF%BC%88Slave-Morality%EF%BC%89"><span class="nav-number">4.4.</span> <span class="nav-text">奴隶道德分析（Slave Morality）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E7%BB%93%E8%AE%BA%E5%92%8C%E6%9C%80%E7%BB%88%E5%BB%BA%E8%AE%AE"><span class="nav-number">4.5.</span> <span class="nav-text">综合结论和最终建议</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">吴文雅</p>
+  <div class="site-description" itemprop="description">且将新火试新茶，诗酒趁年华</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/SophieWu9824" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;SophieWu9824" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wuwenya9824@gmail.com" title="E-Mail → mailto:wuwenya9824@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=KbtcEn8AAAAJ&hl=en" title="Google → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;KbtcEn8AAAAJ&amp;hl&#x3D;en" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>Google</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吴文雅</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">159k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:25</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+-->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
