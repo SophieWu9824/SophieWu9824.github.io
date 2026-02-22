@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sophiewu9824.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="由于住得比较远，每天上下班都要通勤很长时间，具体来说中间需要换乘四条地铁线，描述成图结构的话，就是单程我需要在含起终点在内的5个node间做线性遍历，day after day，其中包括望京西站、光熙门站，这两站下来都要在站内走一段相当长的距离，望京西站的换乘中由于人很多，我一般都是还要爬50多级台阶（因为电梯人太多）。 去年年初刚开始这种极端通勤时，身心都极其不适应，但是时间久了，发现似乎是这条">
+<meta property="og:type" content="article">
+<meta property="og:title" content="熟悉的陌生人">
+<meta property="og:url" content="https://sophiewu9824.github.io/2026/02/22/%E7%86%9F%E6%82%89%E7%9A%84%E9%99%8C%E7%94%9F%E4%BA%BA/index.html">
+<meta property="og:site_name" content="Sophie Wu">
+<meta property="og:description" content="由于住得比较远，每天上下班都要通勤很长时间，具体来说中间需要换乘四条地铁线，描述成图结构的话，就是单程我需要在含起终点在内的5个node间做线性遍历，day after day，其中包括望京西站、光熙门站，这两站下来都要在站内走一段相当长的距离，望京西站的换乘中由于人很多，我一般都是还要爬50多级台阶（因为电梯人太多）。 去年年初刚开始这种极端通勤时，身心都极其不适应，但是时间久了，发现似乎是这条">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-02-22T14:30:50.000Z">
+<meta property="article:modified_time" content="2026-02-22T14:36:44.971Z">
+<meta property="article:author" content="吴文雅">
+<meta property="article:tag" content="生活">
+<meta property="article:tag" content="社会">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://sophiewu9824.github.io/2026/02/22/%E7%86%9F%E6%82%89%E7%9A%84%E9%99%8C%E7%94%9F%E4%BA%BA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>熟悉的陌生人 | Sophie Wu</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Sophie Wu</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Beauty always leads us to truth.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sophiewu9824.github.io/2026/02/22/%E7%86%9F%E6%82%89%E7%9A%84%E9%99%8C%E7%94%9F%E4%BA%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="吴文雅">
+      <meta itemprop="description" content="且将新火试新茶，诗酒趁年华">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sophie Wu">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          熟悉的陌生人
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-02-22 22:30:50 / 修改时间：22:36:44" itemprop="dateCreated datePublished" datetime="2026-02-22T22:30:50+08:00">2026-02-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%9B%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">创作</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%9B%E4%BD%9C/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>由于住得比较远，每天上下班都要通勤很长时间，具体来说中间需要换乘四条地铁线，描述成图结构的话，就是单程我需要在含起终点在内的5个node间做线性遍历，day after day，其中包括望京西站、光熙门站，这两站下来都要在站内走一段相当长的距离，望京西站的换乘中由于人很多，我一般都是还要爬50多级台阶（因为电梯人太多）。</p>
+<p>去年年初刚开始这种极端通勤时，身心都极其不适应，但是时间久了，发现似乎是这条5个node、4个edge的图结构似乎已经在大脑和身体上都已经形成了认知地图，虽然通勤时间一点也没有缩短，但是每天再走这条路线已经几乎不需要消耗认知资源，更近似于习惯化行为。</p>
+<p>路线是相对稳定的，拥挤也是稳定的，但是地铁上遇到的人每天都是不一样的，所以偶尔发现的那些“熟悉的陌生人”让我觉得很有意思。比如光熙门换乘站，有一次下车时我发现两个人手挽手（应该是情侣或夫妻），而且那位男生体型特征比较有特色（很胖），女生戴着耳机、左手挽着帆布包，当时就直接从他们身边走过去了，没觉得有啥特别的。但是后来又有三到四次，同样是在光熙门站换乘时下车的地方，这对儿以那些最初被我识别的特征重又出现在我的眼帘。</p>
+<p>去年夏天，也是在光熙门那条几百米的换乘路线上，我边走边朝前方的其他人看去，发现一位穿着裙子、披着头发的女生，连衣裙和走路的姿势都给人很优雅的感觉，在那之后连续几天我都在那条路线上碰见了她，但是穿着不同的连衣裙，每一天都给人很优雅的感受。当然，每天都是我走在后面。</p>
+<p>这些人从来没跟他们说过一句话，甚至在人流中甚至都没有对视过一次，却因为重复出现了几次，而在脑海中留下印象。如果考虑到习惯的上班时间、路线规划重合性和规律性，其实重复碰见一些陌生人是可以理解的。反过来想，也许我也给同行的某个其他人留下过印象。</p>
+<p>这个现象真正让我感兴趣的是，大脑可以在每日的重复无聊和琐碎中检测到这类特殊的pattern，同样也能检测到一些出乎意料的变化。比如晚上回去在芍药居站换乘时偶尔因为时间段的不同出现车厢型号差异（绝大部分时间是A车型，偶尔是B车型-回去特别晚的时候会碰到这种情况），第一次进较少出现的B车型时，我习惯性地迈进去，打开手机准备继续在看手机中度过这段时间，但是仅仅是车内过道、车厢内壁颜色的差异让我下意识地反复查看自己是不是搞错了路线、上错了车。实际上并不是，只是因为时间段的不同，以前没有经历过这种pattern而已。</p>
+<p>总体来说，大脑对于一些新异的，或者重复出现几次的pattern都比较敏感，这看起来是它在不断充实已经建立的认知地图（cognitive map），让这张地图更好用，尽可能涵盖所有的pattern，减少出错的可能以及寻找一些有意义的现象和联系。</p>
+<p>说到认知地图，其实读研的研究主题就是这个，但是当时更侧重于物理空间以及认知、生理层面（这个概念源自行为主义托尔曼对小鼠的迷宫研究）。最近读到一个关于认知地图的很有意思的观点，大意是说，<strong>我们对于客观世界的认知或观点，即构建的认知地图，与真实世界的事实之间的match程度，会在很大程度上影响我们的情绪和行为方式</strong>。</p>
+<p>即认知地图是我们的主观信念，本身是有偏差的，受限于我们自身的经验，不一定跟真实世界完全吻合，因为信念不等于事实。所以，当一件超出我们既有经验和认知的事情发生时，通常首先会引起心理抗拒和情绪反应，我们需要有意识地克服这种情绪反应，理解现象的合理性，接纳事实，才能进一步更新自己的认知地图，也即纠正对真实世界的有偏信念。</p>
+<p>对信念的更新可以改变之后我们对于客观世界将会发生什么的预测，而对结果的预测会反向引导我们要如何调整自己的行为。消极情绪通常意味着外部世界的客观事实并不符合我们的预期或期望，积极情绪则可能是因为符合期望或虽然不符合、但意外地超出期望。所以消极情绪实际上是一种警示信号，而积极情绪则可以成为正向的reward。比如第一次在大雪天打车堵了几小时、感到烦躁愤怒，以后下雪天就不会选择打车了。</p>
+<p>总体而言，情绪是对未来预测的一种外显化的表现，用理智作为媒介，则会对行为有正向引导作用。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag"># 生活</a>
+              <a href="/tags/%E7%A4%BE%E4%BC%9A/" rel="tag"># 社会</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/02/22/%E4%BF%A1%E4%BB%BB%E8%B5%B7%E4%BA%8E%E7%8B%BC%E8%BF%98%E6%B2%A1%E6%9D%A5%E6%97%B6/" rel="prev" title="信任起于狼还没来时">
+      <i class="fa fa-chevron-left"></i> 信任起于狼还没来时
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">吴文雅</p>
+  <div class="site-description" itemprop="description">且将新火试新茶，诗酒趁年华</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/SophieWu9824" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;SophieWu9824" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wuwenya9824@gmail.com" title="E-Mail → mailto:wuwenya9824@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=KbtcEn8AAAAJ&hl=en" title="Google → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;KbtcEn8AAAAJ&amp;hl&#x3D;en" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>Google</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吴文雅</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">221k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">6:09</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+-->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
